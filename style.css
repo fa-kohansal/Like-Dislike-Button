@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.post {
+  width: 480px;
+  font-family: sans-serif;
+}
+.postImg {
+  display: block;
+  width: 100%;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: crimson;
+  margin: 5px 10px;
+}
+.thumbUp {
+  color: green;
+  margin: 5px 10px;
+}
+.thumbDown {
+  color: crimson;
+  margin: 5px 10px;
+}
