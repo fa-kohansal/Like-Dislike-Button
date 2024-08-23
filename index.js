@@ -10,10 +10,11 @@ document.querySelectorAll(".post").forEach(post =>{
             if(rating.classList.contains("post-rating-selected")){
                 return ;
             }
+            count.textContent=Number(count.textContent)+1;
             ratings.forEach((rating) => {
               if (rating.classList.contains("post-rating-selected")) {
                 const count=rating.querySelector(".post-rating-count");
-                count.textContent=Math.min(0,Number(count.textContent) - 1 );
+                count.textContent=Math.max(0,Number(count.textContent) - 1 );
                 rating.classList.remove("post-rating-selected");
               }
             });
