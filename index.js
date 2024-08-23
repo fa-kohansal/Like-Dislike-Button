@@ -7,6 +7,19 @@ document.querySelectorAll(".post").forEach(post =>{
         const count=rating.querySelector(".post-rating-count");
         
         button.addEventListener("click", async ()=>{
+            if(rating.classList.contains("post-rating-selected")){
+                return ;
+            }
+            ratings.forEach((rating) => {
+              if (rating.classList.contains("post-rating-selected")) {
+                const count=rating.querySelector(".post-rating-count");
+                count.textContent=Math.min(0,Number(count.textContent) - 1 );
+                rating.classList.remove("post-rating-selected");
+              }
+            });
+            rating.classList.add("post-rating-selected");
+            
+
             const likeOrDislike= likeRating === rating ? "like": "dislike";
             const response= await fetch (`/post/${postId}/${likeOrDislike}/`);
             const body = await response.json();
