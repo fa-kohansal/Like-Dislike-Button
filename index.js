@@ -18,12 +18,12 @@ let fetchPosts=async()=>{
                 <span class="post-rating-count">0</span>
             </div>
             <div class="post-rating ">
-                <button class="post-rating-btn">
+                <button class="post-rating-btn post-rating-btnD">
                     <span class="material-symbols-outlined thumbDown">
                         thumb_down
                     </span>
                 </button>
-                <span class="post-rating-count">0</span>
+                <span class="post-rating-count post-rating-countD ">0</span>
             </div>
         </div>
 
